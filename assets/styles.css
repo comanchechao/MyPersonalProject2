@@ -1,0 +1,169 @@
+html {
+  overflow-x: hidden;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+}
+
+.navbar {
+  z-index: 2;
+  position: fixed;
+  height: 61px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: ". topnav";
+  background: #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.topnav {
+  grid-area: topnav;
+}
+
+.topnav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 61px;
+}
+
+.topnav li a {
+  display: flex;
+  text-align: center;
+  font-family: Sura;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 27px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.7s ease;
+  text-transform: uppercase;
+}
+
+.topnav li a:hover {
+  color: #eeb1fa;
+  border-bottom: solid 6px #eeb1fa;
+  transition: 0.2s ease;
+}
+
+#login-link {
+  font-family: 'Sura', serif;
+  font-weight: bold;
+  padding: 8px 15px;
+  font-size: 27px;
+  line-height: 94%;
+  color: #3A0CA3;
+  background-color: #FF61A9;
+  border-radius: 38px;
+  text-decoration: none;
+  transition: 0.7s ease;
+}
+
+#login-link:hover {
+  color: #FF61A9;
+  border-bottom: none;
+  background-color: #3A0CA3;
+}
+
+/* .container {
+  background-color: #3A0CA3;
+  width: 600px;
+  height: 400px;
+  margin: auto;
+  text-align: center;
+  border-radius: 40px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+
+.container h1 {
+  font-family: alata;
+  font-size: 43px;
+
+} */
+/* .background {
+  margin: 0;
+} */
+.background-picture {
+  display: block;
+  position: absolute;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  width: 100%;
+  height: 900px;
+  -moz-filter: blur(1px);
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  height: 900px;
+}
+
+.h1-text h1 {
+  width: 600px;
+  font-family: alata;
+  font-size: 93px;
+  text-align: left;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+.second {
+  display: block;
+  width: 100%;
+  height: 900px;
+}
+
+button {
+display: block;
+position: absolute;
+  justify-content: center;
+  align-self: center;
+}
