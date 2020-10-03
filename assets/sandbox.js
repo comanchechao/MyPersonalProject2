@@ -1,24 +1,30 @@
-smoothScroll = function(target) {
-  let scrollContainer = target;
-  do {
-    scrollContainer = scrollContainer.parentNode;
-    if (!scrollContainer) return scrollContainer.scrollTop += 1;
-  }
-  while (scrollContainer.scrollTop == 0);
-
-  let targetY = 0;
-  do {
-    if (target == scrollContainer) break;
-    targetY += target.offsetTop;
-  } while (target == target.offsetParent);
-  scroll = function(c, a, b, i) {
-    i++;
-    if (i > 30) return;
-    c.scrollTop = a + (b - a) / 30 * i;
-    setTimeout(function() {
-      scroll(c, a, b, i);
-    }, 20);
-  }
-  // start scrolling
-  scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
-}
+// window.smoothScroll = function(target) {
+//   var scrollContainer = target;
+//   do { //find scroll container
+//     scrollContainer = scrollContainer.parentNode;
+//     if (!scrollContainer) return;
+//     scrollContainer.scrollTop += 1;
+//   } while (scrollContainer.scrollTop == 0);
+//
+//   var targetY = 0;
+//   do { //find the top of target relatively to the container
+//     if (target == scrollContainer) break;
+//     targetY += target.offsetTop;
+//   } while (target = target.offsetParent);
+//
+//   scroll = function(c, a, b, i) {
+//     i++;
+//     if (i > 30) return;
+//     c.scrollTop = a + (b - a) / 30 * i;
+//     setTimeout(function() {
+//       scroll(c, a, b, i);
+//     }, 20);
+//   }
+//   // start scrolling
+//   scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+// }
+// const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+// tl.to(".text", { y: "0%", duration: 1, stagger: 0.25 });
+// tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
+// tl.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 1 });
+// tl.fromTo(".big-text", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");

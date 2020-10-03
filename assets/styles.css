@@ -1,77 +1,162 @@
-html {
-  overflow-x: hidden;
+:root {
+  font-size: 16px;
+  /* font-family: 'Open Sans'; */
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --transition-speed: 600ms;
 }
 
-html, body {
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+
+/* html {
+  overflow-x: hidden;
+} */
+
+body {
   height: 100%;
   width: 100%;
+  background: white;
+  color: #1e1e24;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   /* overflow-x: hidden; */
 }
 
+main {
+  margin-left: 5rem;
+  padding: 1rem;
+}
 .navbar {
-  z-index: 2;
   position: fixed;
-  height: 61px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: ". topnav";
-  background: #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
+
+  background-color: var(--bg-primary);
+  transition: width 600ms ease;
+  overflow: hidden;
 }
 
-.topnav {
-  grid-area: topnav;
-}
+.navbar-nav {
 
-.topnav ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  height: 61px;
+  height: 100%;
 }
 
-.topnav li a {
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-item:last-child {
+  margin-top: auto;
+}
+
+.nav-link {
   display: flex;
-  text-align: center;
-  font-family: Sura;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 27px;
-  color: #ffffff;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
   text-decoration: none;
-  transition: 0.7s ease;
-  text-transform: uppercase;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
 }
 
-.topnav li a:hover {
-  color: #eeb1fa;
-  border-bottom: solid 6px #eeb1fa;
-  transition: 0.2s ease;
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
 }
 
-#login-link {
-  font-family: 'Sura', serif;
-  font-weight: bold;
-  padding: 8px 15px;
-  font-size: 27px;
-  line-height: 94%;
-  color: #3A0CA3;
-  background-color: #FF61A9;
-  border-radius: 38px;
-  text-decoration: none;
-  transition: 0.7s ease;
+.link-text {
+  display: none;
+  font-family: Engagement; 
+  font-size: 2.4rem;
+  /* margin-left: 1rem; */
 }
 
-#login-link:hover {
-  color: #FF61A9;
-  border-bottom: none;
-  background-color: #3A0CA3;
+.nav-link i {
+  font-size: 1.8rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
 }
+
+.nav-link:hover {
+  color: aqua;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  main {
+    margin: 0;
+  }
+}
+
+
+
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+  }
+
+  /* .navbar:hover .logo svg
+  {
+    margin-left: 11rem;
+  } */
+
+  .navbar:hover .logo-text
+  {
+    left: 0px;
+  }
+}
+
+
+
+
+
+
 
 /* .container {
   background-color: #3A0CA3;
@@ -93,7 +178,7 @@ html, body {
 /* .background {
   margin: 0;
 } */
-.background-picture {
+/* .background-picture {
   display: block;
   position: absolute;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -133,8 +218,8 @@ html, body {
   100% {
     opacity: 1;
   }
-}
-
+} */
+/* 
 .container {
   display: flex;
   flex-direction: column;
@@ -151,19 +236,52 @@ html, body {
   font-family: alata;
   font-size: 93px;
   text-align: left;
-  color: #ffffff;
+  color: #23232e;
   text-transform: capitalize;
+} */
+
+
+
+/* .intro {
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.second {
-  display: block;
+.intro-text {
+  color: white;
+  font-family: Fira;
+  font-size: 3rem;
+}
+
+.hide {
+  background: black;
+  overflow: hidden;
+}
+
+.hide span {
+  transform: translateY(100%);
+  display: inline-block;
+} */
+/* .second {
+  transform: translateY(100%);
   width: 100%;
   height: 900px;
 }
 
-button {
-display: block;
-position: absolute;
-  justify-content: center;
-  align-self: center;
-}
+.button {
+  z-index: 2;
+  position: absolute;
+  color: purple;
+  background-color: skyblue;
+  font-size: 4rem;
+  border-radius: 40px;
+  padding: 20px 10px;
+
+} */
