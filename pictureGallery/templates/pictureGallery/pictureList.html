@@ -1,0 +1,19 @@
+{% extends 'homepage.html' %}
+{% load static %}
+
+
+{% block image %}
+  <h1 class="titlearticle">Articles List</h1>
+
+<div class="grid">
+    {% for picture in pictures %}
+    <div class="grid-item">
+        <img src="{{ picture.image.url }}" />
+        <h2><a href="#">{{ picture.title }}</a></h2>
+        <p>{{ picture.date }}</p>
+        <p class="creator"> Added by <strong>{{ picture.creator.username }}</strong></p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
