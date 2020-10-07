@@ -7,4 +7,4 @@ def pictureList(request):
     context = {
         'pictures' : pictures,
     }
-    return render(request, 'pictures/pictureList.html', context = context)
+    return render(request, 'pictureGallery/pictureList.html', context = context)
