@@ -10,7 +10,7 @@ urlpatterns = [
     url(r'^pictureGallery/', include('pictureGallery.urls')),
     # url(r'^accounts/', include('accounts.urls')),
     # url(r'^about/$', views.about, name="about"),
-    url(r'^$', views.homepage, name="home"),
+    url(r'^$', views.weather, name="weather"),
 ]
 
 

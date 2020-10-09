@@ -1,0 +1,30 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: palegoldenrod;
+    font-size: 16px;
+    font-family: Sura;
+}
+
+
+.grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-template-rows: repeat(4, 1fr);
+}
+
+.h1-text {
+    background-color: palegreen;
+    grid-area: 1/1/2/3;
+}
+
+.p-text {
+    background-color: palevioletred;
+    grid-area: 2/3/3/-4;
+}
+
+.image-div {
+
+}
